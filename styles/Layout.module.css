@@ -1,0 +1,13 @@
+.layout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.layoutSidebar {
+    flex: 0.2;
+}
+
+.layoutBody {
+    flex: 0.8;
+}
