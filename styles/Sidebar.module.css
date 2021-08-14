@@ -42,6 +42,7 @@
     color: #FFFFFF;
     padding-left: 4rem;
     margin: 0.5rem 0;
+    white-space: nowrap;
 }
 
 .navLinkActive {
@@ -56,4 +57,39 @@
     font-size: 24px;
     padding-left: 4rem;
     margin: 0.5rem 0;
+}
+
+
+
+@media (min-width: 992px) and (max-width: 1380px) {
+    .navItems {
+        padding-left: 1rem;
+    }
+    .navLink {
+        font-size: 24px;
+        padding-left: 3rem;
+        white-space: nowrap;
+    }
+    .navLinkActive {
+        font-size: 24px;
+        padding-left: 3rem;
+        white-space: nowrap;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .navItems {
+        padding-left: 1rem;
+    }
+    .navLink {
+        font-size: 20px;
+        padding-left: 1.5rem;
+        white-space: nowrap;
+    }
+    .navLinkActive {
+        font-size: 20px;
+        padding-left: 1.5rem;
+        white-space: nowrap;
+    }
 }
