@@ -14,18 +14,18 @@ function Landing() {
             <div className={styles.landingBody}>
                 <div className={styles.landingDescription}>
                     <div className={styles.headingImage}>
-                        <Image src={headingImg} layout="responsive" height={50} width={100} />                    
+                        <Image src={headingImg} layout="responsive" height={50} width={100} className={styles.landingImg} alt="Advantus"/>                    
                     </div>
                     <p>Lorem ipsum dolor sit amet, onsectetur adipiscing elit. Tristique semper urna, </p>
                     <button className={styles.landingButton}>
                         <div className={styles.buttonImage}>
-                        <Image src={callButton} layout="responsive" height={50} width={50} />
+                            <Image src={callButton} layout="responsive" height={50} width={50} alt="Advantus"/>
                         </div>                     
                         <p>Call Now</p>
                     </button>
                 </div>
                 <div className={styles.landingImage}>
-                    <Image src={img1} layout="responsive" height={100} width={120} />
+                    <Image src={img1} layout="responsive" height={100} width={120} alt="Advantus"/>
                 </div>
             </div>
         </div>

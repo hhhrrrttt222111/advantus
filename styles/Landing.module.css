@@ -3,7 +3,7 @@
 }
 
 .landingBody {
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -25,10 +25,12 @@
     width: 65%;
 }
 
+
 .headingImage {
+    width: 100%;
     height: 220px;
-    width: 550px;
 }
+
 
 .landingButton {
     margin-top: 20px;
@@ -41,6 +43,8 @@
     background-color: #15315E;
     border-radius: 15px;
     cursor: pointer;
+    border: none;
+    outline: none;
 }
 
 .landingButton p {
