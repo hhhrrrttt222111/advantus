@@ -1,4 +1,104 @@
 .purchase {
     height: 100vh;
-    background-color: chartreuse;
+    position: relative;
+}
+
+.purchaseBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.purchaseBody h1 {
+    color: #15315E;
+    font-size: 45px;
+    font-family: Epilogue;
+    padding: 4.5rem;
+}
+
+.purchaseBody h6 {
+    color: #15315E;
+    font-family: Epilogue;
+    font-size: 25px;
+   font-weight: 500;
+   margin-bottom: 65px;
+   width: 34%;
+   text-align: center;
+}
+
+.purchaseInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 35%;
+}
+
+.userImage {
+    width: 125px;
+    height: 220px;
+}
+
+.purchaseDesc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.purchaseDesc h2{
+    color: #15315E;
+    font-family: Epilogue;
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.purchaseDesc p {
+    color: #15315E;
+    font-family: Epilogue;
+    font-size: 25px;
+}
+
+.purchaseButtons {
+    display: flex;
+    flex-direction: row;
+}
+
+.purchaseButtons button{
+    border-radius: 50%;
+    background-color: #15315E;
+    color: #fff;
+    width: 62px;
+    height: 62px;
+    border: none;
+    outline: none;
+    position: relative;
+    margin: 1rem;
+}
+
+.callimage{
+    height: 35px;
+    width: 40px;
+    position: absolute;
+    left: 10px;
+    top: 15px;
+}
+
+.mailimage {
+    height: 30px;
+    width: 40px;
+    position: absolute;
+    left: 10px;
+    top: 15px;
+}
+
+.purchaseImage {
+    width: 200px;
+    height: 380px;
+    position: absolute;
+    bottom: 1%;
+    right: 3%;
 }
