@@ -17,7 +17,7 @@ function Purchase() {
                 <h6>To purchase any of our products, please contact </h6>
                 <div className={styles.purchaseInfo}>
                     <div className={styles.userImage}>
-                        <Image src={userimg} alt="advantus" layout="responsive" width={100} height={100} />
+                        <Image src={userimg} alt="advantus" layout="intrinsic" width={150} height={150} />
                     </div>
                     <div className={styles.purchaseDesc}>
                         <h2>Pranav Jayasankar</h2>
@@ -26,7 +26,7 @@ function Purchase() {
                         <div className={styles.purchaseButtons}>
                             <button>
                                 <div className={styles.callimage}>
-                                <Image src={callImage} alt="advantus" layout="responsive" height={50} width={60} />
+                                    <Image src={callImage} alt="advantus" layout="responsive" height={50} width={60} />
                                 </div>
                             </button>
                             <button>

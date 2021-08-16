@@ -32,13 +32,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
-    width: 35%;
+    justify-content: center;
+    width: 100%;
 }
 
 .userImage {
-    width: 125px;
-    height: 220px;
+    width: 180px;
+    height: 200px;
 }
 
 .purchaseDesc {
@@ -77,6 +77,9 @@
     outline: none;
     position: relative;
     margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .callimage{
@@ -96,9 +99,8 @@
 }
 
 .purchaseImage {
-    width: 200px;
-    height: 380px;
+    width: 15%;
     position: absolute;
-    bottom: 1%;
+    bottom: 0;
     right: 3%;
 }
