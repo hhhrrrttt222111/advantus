@@ -1,7 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link'
-
 import styles from '../styles/Landing.module.css';
 
 import img1 from '../assets/svg/landingPage/img1.svg';
