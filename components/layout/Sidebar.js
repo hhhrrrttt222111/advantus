@@ -1,11 +1,11 @@
 import React from 'react'
-import Image from 'next/image'
+// import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from "next/router";
 
 import styles from '../../styles/Sidebar.module.css'
 
-import navLogo from '../../assets/svg/navLogo.svg'
+// import navLogo from '../../assets/svg/navLogo.svg'
 
 function Sidebar() {
 
@@ -22,11 +22,11 @@ function Sidebar() {
     return (
         <div className={styles.sidebar}>
             <div className={styles.sidebarContainer}>
-                <div className={styles.logo}>
+                {/* <div className={styles.logo}>
                     <Link href="/" passHref>
                         <Image src={navLogo} layout="responsive" height={100} width={100} alt=""/>
                     </Link>
-                </div>
+                </div> */}
                 <div className={styles.navItems}>
                     <Link href="/#home">
                         <a className={`${hashURL === 'home' ? styles.navLinkActive : styles.navLink}`}>
