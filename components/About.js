@@ -20,7 +20,7 @@ function About() {
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id fermentum at dignissim ornare amet. Nullam nunc quam amet morbi blandit purus. Ultricies sit urna vitae purus. Et cursus in euismod vel ultrices feugiat volutpat vitae, aliquam.</p>
                 </div>
                 <div className={styles.aboutImage}>
-                    <Image src={aboutImg} layout="responsive" height={500} width={1400} alt=""/>
+                    <Image src={aboutImg} layout="responsive" height={500} width={1400} alt="" className='no_drag'/>
                 </div>
             </div>
         </div>

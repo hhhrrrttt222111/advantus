@@ -21,12 +21,18 @@ function Purchase() {
                     </div>
                     <div className={styles.purchaseDesc}>
                         <h2>Pranav Jayasankar</h2>
-                        <p>9656246532</p>
-                        <p>pranavpj@gmail.com</p>
+                        <p>
+                            <a href="tel:+919656246532">9656246532</a>
+                        </p>
+                        <p>
+                            <a href="mailto:pranavpj@gmail.com">pranavpj@gmail.com</a>
+                        </p>
                         <div className={styles.purchaseButtons}>
                             <button>
                                 <div className={styles.callimage}>
-                                    <Image src={callImage} alt="advantus" layout="responsive" height={50} width={60} />
+                                    <a href="tel:+919656246532">
+                                        <Image src={callImage} alt="advantus" layout="responsive" height={50} width={60} />     
+                                    </a>
                                 </div>
                             </button>
                             <button>

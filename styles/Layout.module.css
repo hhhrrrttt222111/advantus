@@ -11,3 +11,27 @@
 .layoutBody {
     flex: 0.8;
 }
+
+
+
+@media (min-width: 992px) and (max-width: 1380px) {
+
+}
+
+
+@media screen and (max-width: 992px) {
+
+}
+
+
+@media screen and (max-width: 800px) {
+    .layout {
+        padding: 1rem;
+    }
+    .layoutSidebar {
+        flex: 0;
+    }
+    .layoutBody {
+        flex: 1;
+    }
+}

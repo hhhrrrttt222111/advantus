@@ -12,7 +12,7 @@ function Landing() {
             <div className={styles.landingBody}>
                 <div className={styles.landingDescription}>
                     <div className={styles.headingImage}>
-                        <Image src={headingImg} layout="responsive" height={50} width={100} className={styles.landingImg} alt="Advantus"/>                    
+                        <Image src={headingImg} layout="responsive" height={50} width={100} alt="Advantus"/>                    
                     </div>
                     <p>Lorem ipsum dolor sit amet, onsectetur adipiscing elit. Tristique semper urna, </p>
                     <button className={styles.landingButton}>
