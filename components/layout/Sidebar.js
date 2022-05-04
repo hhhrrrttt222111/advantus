@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 import styles from '../../styles/Sidebar.module.css'
 
-import navLogo from '../../assets/svg/navLogo.svg'
+import navLogo from '../../assets/png/navLogo.png'
 
 function Sidebar() {
 

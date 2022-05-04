@@ -26,7 +26,7 @@
     font-family: Epilogue;
     font-style: normal;
     font-weight: 600;
-    font-size: 38px;
+    font-size: 3rem;
     line-height: 46px;
     color: #15315E;
     margin-right: 1.25rem;
@@ -45,4 +45,21 @@
     margin-top: 2rem;
     gap: 2rem;
     width: 100%;
+}
+
+
+@media (min-width: 992px) and (max-width: 1380px) {
+
+}
+
+
+@media screen and (max-width: 992px) {
+
+}
+
+
+@media screen and (max-width: 800px) {
+    .productsHeader h1 {
+        font-size: 2rem;
+    }
 }
