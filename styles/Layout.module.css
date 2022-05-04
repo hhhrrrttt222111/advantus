@@ -12,7 +12,9 @@
     flex: 0.8;
 }
 
-
+.layoutBottombar {
+    display: none;
+}
 
 @media (min-width: 992px) and (max-width: 1380px) {
 
@@ -33,5 +35,8 @@
     }
     .layoutBody {
         flex: 1;
+    }
+    .layoutBottombar {
+        display: block;
     }
 }

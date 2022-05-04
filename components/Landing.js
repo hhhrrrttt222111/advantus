@@ -4,7 +4,6 @@ import styles from '../styles/Landing.module.css';
 
 import img1 from '../assets/svg/landingPage/img1.svg';
 import headingImg from '../assets/svg/landingPage/heading.svg';
-import callButton from '../assets/svg/landingPage/callbutton.svg';
 
 function Landing() {
     return (
@@ -14,13 +13,7 @@ function Landing() {
                     <div className={styles.headingImage}>
                         <Image src={headingImg} layout="responsive" height={50} width={100} alt="Advantus"/>                    
                     </div>
-                    <p>Lorem ipsum dolor sit amet, onsectetur adipiscing elit. Tristique semper urna, </p>
-                    <button className={styles.landingButton}>
-                        <div className={styles.buttonImage}>
-                            <Image src={callButton} layout="responsive" height={50} width={50} alt="Advantus"/>
-                        </div>                     
-                        <p>Call Now</p>
-                    </button>
+                    <p>With a goal of ensuring a healthier future, we at Advantus life sciences work to provide top quality medicines at affordable prices. We aim to enhance the quality of life of each & every citizen through the best of our hands. </p>
                 </div>
                 <div className={styles.landingImage}>
                     <Image src={img1} layout="responsive" height={100} width={120} alt="Advantus"/>

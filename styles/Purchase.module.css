@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    gap: 1.2rem;
 }
 
 .purchaseBody h1 {
@@ -18,89 +19,74 @@
     padding: 4.5rem;
 }
 
-.purchaseBody h6 {
-    color: #15315E;
-    font-family: Epilogue;
-    font-size: 25px;
-   font-weight: 500;
-   margin-bottom: 65px;
-   width: 34%;
-   text-align: center;
-}
-
-.purchaseInfo {
+.phoneContainer {
+    width: 100%;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    position: relative;
 }
 
-.userImage {
-    width: 180px;
-    height: 200px;
-}
-
-.purchaseDesc {
+.phoneNums {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-}
-
-.purchaseDesc h2{
-    color: #15315E;
-    font-family: Epilogue;
-    font-weight: 700;
-    font-size: 25px;
-    margin-bottom: 20px;
-}
-
-.purchaseDesc p {
-    color: #15315E;
-    font-family: Epilogue;
-    font-size: 25px;
-}
-
-.purchaseButtons {
-    display: flex;
-    flex-direction: row;
-}
-
-.purchaseButtons button{
-    border-radius: 50%;
-    background-color: #15315E;
-    color: #fff;
-    width: 62px;
-    height: 62px;
-    border: none;
-    outline: none;
-    position: relative;
-    margin: 1rem;
-    display: flex;
-    align-items: center;
     justify-content: center;
+    border: 2px solid #15315E;
+    box-sizing: border-box;
+    border-radius: 15px;
+    padding: 1.25rem 1.25rem 1.25rem 2rem;
+    position: relative;
 }
 
-.callimage{
-    height: 35px;
-    width: 40px;
+.phoneIcon {
     position: absolute;
-    left: 10px;
-    top: 15px;
+    left: 0;
+    font-size: 2rem;
+    color: #15315E;
+    left: -1.25rem;
+    background-color: #ffffff;
+    padding: 0.35rem;
+    box-sizing: content-box;
 }
 
-.mailimage {
-    height: 30px;
-    width: 40px;
-    position: absolute;
-    left: 10px;
-    top: 15px;
+.phone {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.55rem;
+    line-height: 137%;
+    text-align: center;
+    color: #15315E;
 }
 
-.purchaseImage {
-    width: 15%;
+.emailContainer {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.emailIcon {
+    font-size: 2rem;
+    color: #15315E;
+}
+
+.email {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.55rem;
+    line-height: 137%;
+    text-align: center;
+    color: #15315E;
+}
+
+.bold {
+    font-weight: 800;
+}
+
+.image {
     position: absolute;
-    bottom: 0;
-    right: 3%;
+    right: 20%;
+    width: 100px;
 }

@@ -1,0 +1,27 @@
+.card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: baseline;
+    width: 70%;
+    height: 250px;
+    background: #FFFAFA;
+    box-shadow: -1px 0px 18px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    background-image: url('../assets/svg/cardBg.svg');
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.card_img {
+    width: 30%;
+    height: 250px;
+    position: relative;
+}
+
+.image {
+    border-radius: 15px 106px 0px 15px;
+}
+
+.card_content {
+
+}

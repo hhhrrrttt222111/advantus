@@ -1,10 +1,8 @@
 import Head from 'next/head'
 import About from '../components/About'
-import Contact from '../components/Contact'
-
 import Landing from '../components/Landing'
 import Layout from '../components/layout/layout'
-import Products from '../components/Products'
+import Products from '../components/Products/Products'
 import Purchase from '../components/Purchase'
 
 export default function Home() {
@@ -20,7 +18,6 @@ export default function Home() {
       <About />
       <Products />
       <Purchase />
-      <Contact />
       
 
     </Layout>

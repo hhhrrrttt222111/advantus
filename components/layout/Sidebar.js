@@ -50,11 +50,6 @@ function Sidebar() {
                             Purchase
                         </a>
                     </Link>
-                    <Link href="/#contact">
-                        <a className={`${hashURL === 'contact' ? styles.navLinkActive : styles.navLink}`}>
-                            Contact Us
-                        </a>
-                    </Link>
                 </div>
             </div>
         </div>
