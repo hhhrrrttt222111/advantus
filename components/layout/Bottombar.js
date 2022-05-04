@@ -14,7 +14,9 @@ function Bottombar() {
         <div className={styles.bottomContainer}>
             <div className={styles.logoCircle}>
                 <Link href="/" passHref>
-                    <Image src={logoColor} height={70} width={70} layout="responsive" alt=""/>
+                    <a>
+                        <Image src={logoColor} height={70} width={70} layout="responsive" alt=""/>
+                    </a>
                 </Link>
             </div>
             <Link href="/#products" passHref>
