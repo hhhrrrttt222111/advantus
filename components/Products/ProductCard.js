@@ -105,13 +105,13 @@ function ProductCard({ id, name, composition, indications, dosage, formulation, 
                             <h2 className={styles.dropdown_heading} data-aos="fade-up">Composition</h2>
                             </AccordionSummary>
                             <AccordionDetails sx={{padding: '0.5rem 0'}}>
-                                <p className={styles.dropdown_content}>
+                                <div className={styles.dropdown_content}>
                                     <ul>
                                         {composition.map((comp, id) => (
                                             <li key={id}>{comp}</li>
                                         ))}
                                     </ul>
-                                </p>
+                                </div>
                             </AccordionDetails>
                         </Accordion>
 
@@ -130,13 +130,13 @@ function ProductCard({ id, name, composition, indications, dosage, formulation, 
                             <h2 className={styles.dropdown_heading} data-aos="fade-up">Indication</h2>
                             </AccordionSummary>
                             <AccordionDetails sx={{padding: '0.5rem 0'}}>
-                                <p className={styles.dropdown_content}>
+                                <div className={styles.dropdown_content}>
                                     <ul>
                                         {indications.map((ind, id) => (
                                             <li key={id}>{ind}</li>
                                         ))}
                                     </ul>
-                                </p>
+                                </div>
                             </AccordionDetails>
                         </Accordion>
                     </div>
