@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -19,13 +19,13 @@ function ProductCard({ id, name, composition, indications, dosage, formulation, 
     };
 
     return (
-        <div className={styles.card} key={id}>
+        <div className={styles.card} key={id} data-aos='fade-up'>
+            <h1>{name}</h1>
             <div className={styles.container}>
                 <div className={styles.card_img}>
                     <Image src={img} alt="" placeholder="blur" priority="true" className={styles.image} layout="fill"/>
                 </div>
                 <div className={styles.card_content}>
-                    <h1>{name}</h1>
                     <div className={styles.dropdown}>
                         <Accordion 
                             expanded={expanded === 'panel1'} onChange={handleChange('panel1')}
@@ -39,7 +39,7 @@ function ProductCard({ id, name, composition, indications, dosage, formulation, 
                                 aria-controls='panel1bh-content' id='panel1bh-header'
                                 sx={{ padding: 0 }}
                             >
-                            <h2 className={styles.dropdown_heading} data-aos="fade-up">Dosage</h2>
+                            <h2 className={styles.dropdown_heading} >Dosage</h2>
                             </AccordionSummary>
                             <AccordionDetails sx={{padding: '0.5rem 0'}}>
                                 <p className={styles.dropdown_content} >
@@ -60,7 +60,7 @@ function ProductCard({ id, name, composition, indications, dosage, formulation, 
                                 aria-controls='panel2bh-content' id='panel2bh-header'
                                 sx={{ padding: 0 }}
                             >
-                            <h2 className={styles.dropdown_heading} data-aos="fade-up">Packing</h2>
+                            <h2 className={styles.dropdown_heading} >Packing</h2>
                             </AccordionSummary>
                             <AccordionDetails sx={{padding: '0.5rem 0'}}>
                                 <p className={styles.dropdown_content}>
@@ -81,7 +81,7 @@ function ProductCard({ id, name, composition, indications, dosage, formulation, 
                                 aria-controls='panel3bh-content' id='panel3bh-header'
                                 sx={{ padding: 0 }}
                             >
-                            <h2 className={styles.dropdown_heading} data-aos="fade-up">Formulation</h2>
+                            <h2 className={styles.dropdown_heading} >Formulation</h2>
                             </AccordionSummary>
                             <AccordionDetails sx={{padding: '0.5rem 0'}}>
                                 <p className={styles.dropdown_content}>
@@ -102,7 +102,7 @@ function ProductCard({ id, name, composition, indications, dosage, formulation, 
                                 aria-controls='panel4bh-content' id='panel4bh-header'
                                 sx={{ padding: 0 }}
                             >
-                            <h2 className={styles.dropdown_heading} data-aos="fade-up">Composition</h2>
+                            <h2 className={styles.dropdown_heading} >Composition</h2>
                             </AccordionSummary>
                             <AccordionDetails sx={{padding: '0.5rem 0'}}>
                                 <div className={styles.dropdown_content}>
@@ -127,7 +127,7 @@ function ProductCard({ id, name, composition, indications, dosage, formulation, 
                                 aria-controls='panel5bh-content' id='panel5bh-header'
                                 sx={{ padding: 0 }}
                             >
-                            <h2 className={styles.dropdown_heading} data-aos="fade-up">Indication</h2>
+                            <h2 className={styles.dropdown_heading} >Indication</h2>
                             </AccordionSummary>
                             <AccordionDetails sx={{padding: '0.5rem 0'}}>
                                 <div className={styles.dropdown_content}>

@@ -3,11 +3,24 @@
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     width: 80%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card h1 {
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 31px;
+    text-align: center;
+    color: #15315E;
 }
 
 .container {
     width: 100%;
-    padding: 2rem;
     display: flex;
     align-items: center;
 }
@@ -29,16 +42,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.card_content h1 {
-    font-family: 'Epilogue';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.75rem;
-    line-height: 31px;
-    text-align: center;
-    color: #15315E;
 }
 
 .dropdown {
@@ -71,7 +74,7 @@
 }
 
 @media (min-width: 992px) and (max-width: 1380px) {
-    .container {
+    .card {
         padding: 1.5rem;
     }
 }
@@ -80,8 +83,6 @@
 @media screen and (max-width: 992px) {
     .card {
         width: 90%;
-    }
-    .container {
         padding: 1.5rem;
     }
 }
@@ -90,10 +91,14 @@
 @media screen and (max-width: 800px) {
     .card {
         width: 100%;
+        padding: 1.5rem 1rem;
+    }
+    .card h1 {
+        font-size: 1.35rem;
     }
     .container {
-        padding: 1.5rem 1rem;
-        flex-direction: column-reverse;
+        flex-direction: column;
+        margin-top: 1rem;
     }
     .card_img {
         width: 100%;
@@ -101,10 +106,10 @@
         position: relative;
     }
     .image {
-
-    }
+        border-radius: 20px;
+    }    
     .dropdown {
         width: 100%;
-        padding: 1rem;
+        padding: 1rem 0;
     }
 }

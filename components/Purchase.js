@@ -14,7 +14,7 @@ function Purchase() {
                 <h1>Online Purchase</h1>
 
                 <div className={styles.phoneContainer}>
-                    <div className={styles.phoneNums}>
+                    <div className={styles.phoneNums} data-aos='fade-up' data-aos-duration="400">
                         <FiPhoneCall className={styles.phoneIcon}/>
                         <p className={styles.phone}>
                             <a href="tel:+918921548088">+91 8921548088</a>
@@ -30,11 +30,11 @@ function Purchase() {
                         <Image src={purchaseImg} alt="" className={styles.image} />
                     </div>
                 </div>
-                <div className={styles.emailContainer}>
+                <div className={styles.emailContainer} data-aos='fade-up' data-aos-duration="600">
                     <FiMail className={styles.emailIcon}/>
                     <a href="mailto:advantuslifesciences@gmail.com" className={styles.email}>advantuslifesciences@gmail.com</a> 
                 </div>
-                <p className={styles.phone}>
+                <p className={styles.phone} data-aos='fade-up' data-aos-duration="800">
                     For product enquiries: <br />
                     <span className={styles.bold}>Maria Pharma</span> <br />
                     <a href="tel:04842347975">0484 2347975</a> <br />
