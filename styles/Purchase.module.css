@@ -95,12 +95,16 @@
 
 
 @media (min-width: 992px) and (max-width: 1380px) {
-
+    .image {
+        right: 15%;
+    }
 }
 
 
 @media screen and (max-width: 992px) {
-
+    .image {
+        right: 5%;
+    }
 }
 
 
@@ -135,6 +139,9 @@
         font-size: 1.15rem;
     }
     .image {
-        display: none;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%,-60%);
+        width: 80px;
     }
 }

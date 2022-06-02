@@ -26,9 +26,6 @@ function Purchase() {
                             <a href="tel:+919495936026">+91 9495936026</a>
                         </p>
                     </div>
-                    <div className={styles.image}>
-                        <Image src={purchaseImg} alt="" className={styles.image} />
-                    </div>
                 </div>
                 <div className={styles.emailContainer} data-aos='fade-up' data-aos-duration="600">
                     <FiMail className={styles.emailIcon}/>
@@ -40,6 +37,9 @@ function Purchase() {
                     <a href="tel:04842347975">0484 2347975</a> <br />
                     <a href="tel:+919847045354">+91 9847045354</a>
                 </p>
+                <div className={styles.image}>
+                    <Image src={purchaseImg} alt="" />
+                </div>
             </div>
 
         </div>
