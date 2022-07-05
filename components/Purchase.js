@@ -11,7 +11,7 @@ function Purchase() {
     return (
         <div id="purchase" className={styles.purchase}>
             <div className={styles.purchaseBody}>
-                <h1>Online Purchase</h1>
+                <h1>Contact Us</h1>
 
                 <div className={styles.phoneContainer}>
                     <div className={styles.phoneNums} data-aos='fade-up' data-aos-duration="400">
