@@ -1,3 +1,5 @@
+import Nervoboost from '../assets/products/Nervoboost.jpeg'
+
 const products = [
 
     {
@@ -8,7 +10,7 @@ const products = [
         dosage: 'As directed by the physician.',
         formulation: 'Capsule',
         packing: '10 X 10 Capsules',
-        image: ''
+        image: Nervoboost
     },
     // {
     //     id: 2,

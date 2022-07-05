@@ -7,7 +7,6 @@ import { IoIosArrowDown } from "react-icons/io";
 
 import styles from '../../styles/ProductCard.module.css'
 
-import img from '../../assets/medicine.jpg'
 
 
 function ProductCard({ id, name, composition, indications, dosage, formulation, packing, image }) {
@@ -23,7 +22,7 @@ function ProductCard({ id, name, composition, indications, dosage, formulation, 
             <h1>{name}</h1>
             <div className={styles.container}>
                 <div className={styles.card_img}>
-                    <Image src={img} alt="" placeholder="blur" priority="true" className={styles.image} layout="fill"/>
+                    <Image src={image} alt="" placeholder="blur" priority="true" className={styles.image} layout="fill"/>
                 </div>
                 <div className={styles.card_content}>
                     <div className={styles.dropdown}>
