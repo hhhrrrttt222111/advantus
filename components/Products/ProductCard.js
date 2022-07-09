@@ -37,7 +37,6 @@ function ProductCard({ id, name, composition, indications, dosage, formulation, 
     },[numImages, curImg]);
 
     const image = images[curImg]
-
     return (
         <div className={styles.card} key={id} data-aos='fade-up'>
             <h1>{name}</h1>
