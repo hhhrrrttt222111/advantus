@@ -4,25 +4,60 @@ import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import { IoIosArrowDown } from "react-icons/io";
+import { VscCircleFilled } from "react-icons/vsc";
 
 import styles from '../../styles/ProductCard.module.css'
 
 
 
-function ProductCard({ id, name, composition, indications, dosage, formulation, packing, image }) {
+function ProductCard({ id, name, composition, indications, dosage, formulation, packing, images }) {
 
     const [expanded, setExpanded] = useState(false);
+    const [curImg, setCurImg] = useState(0)
+    
+    const numImages = images.length
 
     const handleChange = (panel) => (event, isExpanded) => {
       setExpanded(isExpanded ? panel : false);
     };
 
+    const handeImgChange = (id) => {
+        setCurImg(id)
+        console.log(curImg)
+    }
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            if(curImg === numImages-1) {
+                setCurImg(0);
+            } else {
+                setCurImg(curImg + 1);
+            }
+         }, 3000);
+    },[numImages, curImg]);
+
+    const image = images[curImg]
+
     return (
         <div className={styles.card} key={id} data-aos='fade-up'>
             <h1>{name}</h1>
             <div className={styles.container}>
-                <div className={styles.card_img}>
-                    <Image src={image} alt="" placeholder="blur" priority="true" className={styles.image} layout="fill"/>
+                <div className={styles.imageContainer}>                        
+                    <div className={styles.card_img}>
+                        {image && (
+                            <Image src={image} alt="" placeholder="blur" blurDataURL priority={true} className={styles.image} layout="fill"/>
+                        )}
+                    </div>
+                    <div className={styles.btn_div}>
+                        {[...Array(numImages)].map((dot, id) => (
+                            <VscCircleFilled 
+                                key={id}
+                                className={styles.bullet}
+                                onClick={() => handeImgChange(id)}
+                                style={{ color: curImg === id ? 'rgba(21, 49, 94, 0.8)' : 'rgba(7, 98, 130, 0.8)', transform: curImg === id ? 'scale(1.1)' : 'scale(0.9)'}}
+                            />
+                        ))}
+                    </div>
                 </div>
                 <div className={styles.card_content}>
                     <div className={styles.dropdown}>

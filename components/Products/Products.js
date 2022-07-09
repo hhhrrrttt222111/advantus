@@ -31,7 +31,7 @@ function Products() {
                                 dosage={product.dosage}
                                 formulation={product.formulation}
                                 packing={product.packing}
-                                image={product.image}
+                                images={product.images}
                             />
                         ))
                     }
