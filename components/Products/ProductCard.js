@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -23,20 +23,10 @@ function ProductCard({ id, name, composition, indications, dosage, formulation, 
 
     const handeImgChange = (id) => {
         setCurImg(id)
-        console.log(curImg)
     }
 
-    useEffect(() => {
-        const timeout = setTimeout(() => {
-            if(curImg === numImages-1) {
-                setCurImg(0);
-            } else {
-                setCurImg(curImg + 1);
-            }
-         }, 3000);
-    },[numImages, curImg]);
-
     const image = images[curImg]
+
     return (
         <div className={styles.card} key={id} data-aos='fade-up'>
             <h1>{name}</h1>
