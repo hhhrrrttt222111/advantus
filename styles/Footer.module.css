@@ -1,0 +1,31 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background: #06aaa0; */
+    padding: 1rem;
+}
+
+.footer p {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #15315E;
+    font-family: Epilogue;
+    text-transform: uppercase;
+}
+.footer p span {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-top: 0.25rem;
+    position: relative;
+    top: 2px;
+}
+
+
+@media screen and (max-width: 800px) {
+    .footer {
+        display: none;
+    }
+    
+}
