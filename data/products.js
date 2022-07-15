@@ -8,10 +8,10 @@ const products = [
         id: 1,
         name: 'Nervoboost Plus',
         composition: ['Methylcobalamine 1500 mcg ', 'Alpha Lipoic Acid 100 mg', 'Vitamin B1 10 mg', 'Vitamin B6 3 mg', 'Folic Acid 1.5 mg'],
-        indications: ['Treatment of Diabetic neuropathy.', 'Painful ortho conditions.', 'Prevention of oxidative stress in high-risk patient and occupational hazard.', 'Maintenance in convalescence.'],
-        dosage: 'As directed by the physician.',
+        indications: ['Diabetic and Peripheral Neuropathy.', 'Vitamin B12 Deficiency.', 'For general well-being.', 'Trigeminal Neuralgia.', 'Megaloblastic Anemia.', 'Chronic Fatigue Syndrome. ', 'Sciatica'],
         formulation: 'Capsule',
         packing: '10 X 10 Capsules',
+        dosage: 'As directed by the physician.',
         images: [nervoboost1, nervoboost2, nervoboost3]
     },
     // {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -17,13 +17,23 @@ function ProductCard({ id, name, composition, indications, dosage, formulation, 
     
     const numImages = images.length
 
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            if(curImg === numImages-1) {
+                setCurImg(0);
+            } else {
+                setCurImg(curImg + 1);
+            }
+         }, 2500);
+    },[numImages, curImg]);
+
     const handleChange = (panel) => (event, isExpanded) => {
       setExpanded(isExpanded ? panel : false);
     };
 
-    const handeImgChange = (id) => {
-        setCurImg(id)
-    }
+    // const handeImgChange = (id) => {
+    //     setCurImg(id)
+    // }
 
     const image = images[curImg]
 
@@ -42,7 +52,7 @@ function ProductCard({ id, name, composition, indications, dosage, formulation, 
                             <VscCircleFilled 
                                 key={id}
                                 className={styles.bullet}
-                                onClick={() => handeImgChange(id)}
+                                // onClick={() => handeImgChange(id)}
                                 style={{ color: curImg === id ? 'rgba(21, 49, 94, 0.8)' : 'rgba(7, 98, 130, 0.8)', transform: curImg === id ? 'scale(1.1)' : 'scale(0.9)'}}
                             />
                         ))}
@@ -50,70 +60,7 @@ function ProductCard({ id, name, composition, indications, dosage, formulation, 
                 </div>
                 <div className={styles.card_content}>
                     <div className={styles.dropdown}>
-                        <Accordion 
-                            expanded={expanded === 'panel1'} onChange={handleChange('panel1')}
-                            disableGutters elevation={0}
-                            sx={{ '&:before': {
-                                display: 'none',
-                            }, background: expanded === 'panel1' ? 'rgba(97, 149, 231, 0.87)' : 'transparent', padding: '0.12rem 1rem', margin: '0.5rem 0', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)' }}
-                        >
-                            <AccordionSummary
-                                expandIcon={<IoIosArrowDown className={styles.icon} />}
-                                aria-controls='panel1bh-content' id='panel1bh-header'
-                                sx={{ padding: 0 }}
-                            >
-                            <h2 className={styles.dropdown_heading} >Dosage</h2>
-                            </AccordionSummary>
-                            <AccordionDetails sx={{padding: '0.5rem 0'}}>
-                                <p className={styles.dropdown_content} >
-                                    {dosage}
-                                </p>
-                            </AccordionDetails>
-                        </Accordion>
-
-                        <Accordion 
-                            expanded={expanded === 'panel2'} onChange={handleChange('panel2')}
-                            disableGutters elevation={0}
-                            sx={{ '&:before': {
-                                display: 'none',
-                            }, background: expanded === 'panel2' ? 'rgba(97, 149, 231, 0.87)' : 'transparent', padding: '0.12rem 1rem', margin: '0.5rem 0', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)' }}
-                        >
-                            <AccordionSummary
-                                expandIcon={<IoIosArrowDown className={styles.icon} />}
-                                aria-controls='panel2bh-content' id='panel2bh-header'
-                                sx={{ padding: 0 }}
-                            >
-                            <h2 className={styles.dropdown_heading} >Packing</h2>
-                            </AccordionSummary>
-                            <AccordionDetails sx={{padding: '0.5rem 0'}}>
-                                <p className={styles.dropdown_content}>
-                                    {packing}
-                                </p>
-                            </AccordionDetails>
-                        </Accordion>
-
-                        <Accordion 
-                            expanded={expanded === 'panel3'} onChange={handleChange('panel3')}
-                            disableGutters elevation={0}
-                            sx={{ '&:before': {
-                                display: 'none',
-                            }, background: expanded === 'panel3' ? 'rgba(97, 149, 231, 0.87)' : 'transparent', padding: '0.12rem 1rem', margin: '0.5rem 0', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)' }}
-                        >
-                            <AccordionSummary
-                                expandIcon={<IoIosArrowDown className={styles.icon} />}
-                                aria-controls='panel3bh-content' id='panel3bh-header'
-                                sx={{ padding: 0 }}
-                            >
-                            <h2 className={styles.dropdown_heading} >Formulation</h2>
-                            </AccordionSummary>
-                            <AccordionDetails sx={{padding: '0.5rem 0'}}>
-                                <p className={styles.dropdown_content}>
-                                    {formulation}
-                                </p>
-                            </AccordionDetails>
-                        </Accordion>
-
-                        <Accordion 
+                    <Accordion 
                             expanded={expanded === 'panel4'} onChange={handleChange('panel4')}
                             disableGutters elevation={0}
                             sx={{ '&:before': {
@@ -160,6 +107,69 @@ function ProductCard({ id, name, composition, indications, dosage, formulation, 
                                         ))}
                                     </ul>
                                 </div>
+                            </AccordionDetails>
+                        </Accordion>
+
+                        <Accordion 
+                            expanded={expanded === 'panel3'} onChange={handleChange('panel3')}
+                            disableGutters elevation={0}
+                            sx={{ '&:before': {
+                                display: 'none',
+                            }, background: expanded === 'panel3' ? 'rgba(97, 149, 231, 0.87)' : 'transparent', padding: '0.12rem 1rem', margin: '0.5rem 0', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)' }}
+                        >
+                            <AccordionSummary
+                                expandIcon={<IoIosArrowDown className={styles.icon} />}
+                                aria-controls='panel3bh-content' id='panel3bh-header'
+                                sx={{ padding: 0 }}
+                            >
+                            <h2 className={styles.dropdown_heading} >Formulation</h2>
+                            </AccordionSummary>
+                            <AccordionDetails sx={{padding: '0.5rem 0'}}>
+                                <p className={styles.dropdown_content}>
+                                    {formulation}
+                                </p>
+                            </AccordionDetails>
+                        </Accordion>
+
+                        <Accordion 
+                            expanded={expanded === 'panel2'} onChange={handleChange('panel2')}
+                            disableGutters elevation={0}
+                            sx={{ '&:before': {
+                                display: 'none',
+                            }, background: expanded === 'panel2' ? 'rgba(97, 149, 231, 0.87)' : 'transparent', padding: '0.12rem 1rem', margin: '0.5rem 0', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)' }}
+                        >
+                            <AccordionSummary
+                                expandIcon={<IoIosArrowDown className={styles.icon} />}
+                                aria-controls='panel2bh-content' id='panel2bh-header'
+                                sx={{ padding: 0 }}
+                            >
+                            <h2 className={styles.dropdown_heading} >Packing</h2>
+                            </AccordionSummary>
+                            <AccordionDetails sx={{padding: '0.5rem 0'}}>
+                                <p className={styles.dropdown_content}>
+                                    {packing}
+                                </p>
+                            </AccordionDetails>
+                        </Accordion>
+
+                        <Accordion 
+                            expanded={expanded === 'panel1'} onChange={handleChange('panel1')}
+                            disableGutters elevation={0}
+                            sx={{ '&:before': {
+                                display: 'none',
+                            }, background: expanded === 'panel1' ? 'rgba(97, 149, 231, 0.87)' : 'transparent', padding: '0.12rem 1rem', margin: '0.5rem 0', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)' }}
+                        >
+                            <AccordionSummary
+                                expandIcon={<IoIosArrowDown className={styles.icon} />}
+                                aria-controls='panel1bh-content' id='panel1bh-header'
+                                sx={{ padding: 0 }}
+                            >
+                            <h2 className={styles.dropdown_heading} >Dosage</h2>
+                            </AccordionSummary>
+                            <AccordionDetails sx={{padding: '0.5rem 0'}}>
+                                <p className={styles.dropdown_content} >
+                                    {dosage}
+                                </p>
                             </AccordionDetails>
                         </Accordion>
                     </div>
